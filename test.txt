@@ -1,0 +1,37 @@
+Start DJANJO project
+
+after installing we have 3 sub commnads
+1. django-admin
+2. startproject : we only us eit once to start project
+3. startapp
+
+
+- when creteing new newproject
+command: djano-admin startproject <name> ex: chaiaurDjango
+
+this create folder
+ --chaiaurDjango
+    --chaiaurDjango(same name dont change)
+    --manage.py
+
+// to start the server on project chaiaurDjango
+command: python manage.py runserver <custom port if required or default 8000>    
+
+//templates consist of html files 
+//static consist of css and js files 
+
+
+--imp
+we create html in template but project doesnt know about so we have tenples
+inside project mention templtes sin templates section
+
+
+
+
+-----------------------------------------------------------------
+video Jinja2 and django apps
+-----------------------------------------------------------------
+create app by command: --python manage.py startapp chai
+we need to aware the project that new app is created like chai
+--so go to project settings.py
+--
