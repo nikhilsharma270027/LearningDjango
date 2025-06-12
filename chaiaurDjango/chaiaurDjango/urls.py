@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include # include is imported to include other URL configurations
 from . import views
 
 urlpatterns = [
@@ -23,4 +23,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),  
     path('contact/', views.contact, name='contact'),
+    path('chai/', include('chai.urls')),  # Include the URLs from the chai app
+    
+    
+    path('__reload__/', include('django_browser_reload.urls')),  # For live reloading during development
+    # the above is the path that makes tailwind hot reload possible
 ]

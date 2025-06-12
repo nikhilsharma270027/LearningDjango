@@ -34,4 +34,21 @@ video Jinja2 and django apps
 create app by command: --python manage.py startapp chai
 we need to aware the project that new app is created like chai
 --so go to project settings.py
---
+--add it to installed app
+
+
+-----------------------------------------------------------------
+video 4: tailwinf insta;ll and uper user
+-----------------------------------------------------------------
+>uv pip install django-tailwind
+>uv pip install django-tailwind[reload]
+>python -m pip install --upgrade
+>python -m ensurepip --upgrade
+
+mention tailwind in installed app in project settings.py
+to start tailwind app
+>python manage.py tailwind init (insie prokject level) 
+-- new theme will be asked . add theme to installed app
+
+here we will run two servers
+so set up INTERNAL_IPS

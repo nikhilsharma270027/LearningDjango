@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chai',  # Custom app for the project
+    'tailwind',
+    'theme',  # Tailwind theme app
+    'django_browser_reload',  # For live reloading during development
 ]
+
+TAILWIND_APP_NAME = 'theme'  # Name of the Tailwind theme app
+INTERNAL_IPS = ['127.0.0.1']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,10 +54,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    "django_browser_reload.middleware.BrowserReloadMiddleware",  # Middleware for live reloading
 ]
 
 ROOT_URLCONF = 'chaiaurDjango.urls'
-
+NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd".replace('\\', '/')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
