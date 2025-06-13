@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include # include is imported to include other URL configurations
+from django.conf import settings
+from django.conf.urls.static import static #this static tell to load media which we creted in settings.py
+# This is the main URL configuration for the chaiaurDjango project.
 from . import views
 
 urlpatterns = [
@@ -28,4 +31,8 @@ urlpatterns = [
     
     path('__reload__/', include('django_browser_reload.urls')),  # For live reloading during development
     # the above is the path that makes tailwind hot reload possible
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# why we use above line is because we want to serve media files during development
+# The above line ensures that media files are served correctly during development.
+# If you are using Django's development server, it will automatically serve static files.

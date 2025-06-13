@@ -52,3 +52,13 @@ to start tailwind app
 
 here we will run two servers
 so set up INTERNAL_IPS
+
+
+
+--------------------------------------------------------------
+video 6: Handle model and urls
+--------------------------------------------------------------
+first we used >migrate command
+
+now  as we create oru own models
+we use >python manage.py makemigrations chai
