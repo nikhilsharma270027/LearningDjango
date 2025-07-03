@@ -1,11 +1,21 @@
 {% extends "layout.html" %}
 
-
 {% block content %}
   <h1>Chai Forms</h1>
 
   <form method="POST">
-    {{form}}
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="bg-amber-600 border-2">Submit</button>
   </form>  
-  
+
+  {% if stores %}
+    <h2>Available Stores</h2>
+    <ul>
+      {% for store in stores %}
+    
+      <li>--{{ store.name }} - {{ store.location }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endblock %}

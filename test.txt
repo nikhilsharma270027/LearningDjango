@@ -50,6 +50,9 @@ to start tailwind app
 >python manage.py tailwind init (insie prokject level) 
 -- new theme will be asked . add theme to installed app
 
+--run on 2nd server to enable tailwind
+>python manage.py tailwind start
+
 here we will run two servers
 so set up INTERNAL_IPS
 
